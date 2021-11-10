@@ -1,8 +1,48 @@
 .navbar-brand {
+  font-size: 2rem!important;
+  font-weight: 600;
+  color: #E76F51;
   display: flex;
   align-items: center;
 }
 
 .navbar-brand img {
   margin-right: 10px;
+  width: 50px;
+}
+
+.navbar-nav {
+  align-items: center!important;
+}
+
+.navbar-nav a:not(:last-child) {
+  margin-right: 2.2rem;
+  font-size: 1.7rem;
+  color: #fff;
+  transition: .5s;
+}
+
+.navbar-nav a:hover:not(:last-child) {
+  color: #E76F51!important;
+}
+
+
+.login-btn {
+  font-size: 1.7rem;
+  background-color: transparent;
+  color: #E76F51;
+  border: 1px solid #E76F51;
+  padding: 8px 16px!important;
+  border-radius: 5px;
+}
+
+.login-btn:hover {
+  background-color: #E76F51;
+  color: #fff!important;
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-nav {
+    display: inline-block!important;
+  }
 }

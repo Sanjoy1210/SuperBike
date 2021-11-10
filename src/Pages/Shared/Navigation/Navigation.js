@@ -11,7 +11,6 @@ const Navigation = () => {
         <Navbar.Brand href="#home">
           <img
             src={logo}
-            width="40"
             className="d-inline-block align-top"
             alt="React Bootstrap logo"
           />
@@ -22,7 +21,7 @@ const Navigation = () => {
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/explore">Explore</Nav.Link>
-            <Nav.Link as={Link} to="/login">Login</Nav.Link>
+            <Nav.Link className="login-btn" as={Link} to="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

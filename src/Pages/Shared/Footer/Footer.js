@@ -63,7 +63,7 @@ const Footer = () => {
           </Row>
         </Container>
         <div className="copyright-content text-center">
-          <p className="copyright-text">&copy; 2021 SuperBike Company, All Rights Reserved. Designed By Sanjoy Paul</p>
+          <p className="copyright-text">&copy; 2021 SuperBike Company, All Rights Reserved. Developed By SuperBike</p>
         </div>
       </div>
     </div>
