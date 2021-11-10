@@ -12,14 +12,14 @@ const Footer = () => {
           <Row>
             <Col xs={12} md={6} lg={3}>
               <div>
-                <div className="d-flex align-items-center">
-                  <img src={logo} alt="" style={{ width: "60px", marginRight: "10px" }} />
-                  <h3>SuperBike</h3>
+                <div>
+                  <img src={logo} alt="" style={{ width: "60px" }} />
+                  <h4>SuperBike</h4>
                 </div>
                 <p>If you are looking for the smoothest way to reach the top speed & cruise in front of your competitors, you’re in the right place. Welcome to SuperBike.</p>
               </div>
             </Col>
-            <Col xs={12} md={6} lg={3}>
+            <Col xs={12} md={5} lg={3} className="offset-md-1 offset-lg-0">
               <div>
                 <h4>OFFICE IN NEW YORK</h4>
                 <p><i className="fas fa-map-marker-alt"></i> 7398 Colonial Rd, Brooklyn <br /> 242 Wythe Ave #4, Brooklyn </p>
@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
               </div>
             </Col>
-            <Col xs={12} md={6} lg={2}>
+            <Col xs={12} md={5} lg={2} className="offset-md-1 offset-lg-0">
               <div className="our-story">
                 <h4>OUR STORY</h4>
                 <div className="links">

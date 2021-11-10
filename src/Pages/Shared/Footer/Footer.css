@@ -1,11 +1,29 @@
 .footer-area {
   padding-top: 100px;
   background-color: #feeae7;
+
 }
 
 .footer-area h4 {
+  font-size: 2rem;
   margin-bottom: 24px;
   font-weight: 700;
+  position: relative;
+}
+
+.footer-area h4::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  display: block;
+  height: 2px;
+  width: 68px;
+  background: #E76F51;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.footer-area p {
+  font-size: 16px;
 }
 
 .links a {
@@ -13,6 +31,11 @@
   text-decoration: none;
   color: black;
   margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #E76F51;
 }
 
 .icons span {
@@ -46,4 +69,13 @@
 .copyright-content p {
   margin-bottom: 0;
   padding: 24px 0;
+}
+
+@media only screen and (max-width: 991px) {
+  div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .footer-area p {
+    font-size: 14px;
+  }
 }
