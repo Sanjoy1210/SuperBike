@@ -1,0 +1,21 @@
+.products-area {
+  padding: 100px 0;
+  position: relative;
+}
+
+.products-area h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+
+.products-area h3::after {
+  content: "";
+  position: absolute;
+  /* bottom: -8px; */
+  display: block;
+  height: 2px;
+  width: 68px;
+  background: #E76F51;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
