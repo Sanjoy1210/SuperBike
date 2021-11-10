@@ -1,0 +1,49 @@
+.footer-area {
+  padding-top: 100px;
+  background-color: #feeae7;
+}
+
+.footer-area h4 {
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.links a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.icons span {
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 18px;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.linkedin {
+  color: #3d40cb;
+}
+
+.twitter {
+  color: #00aeef;
+}
+
+.instagram {
+  color: #f0f;
+}
+
+.youtube {
+  color: #fd0136;
+}
+
+.icons span:hover i {
+  transform: translateY(-5px);
+}
+
+.copyright-content p {
+  margin-bottom: 0;
+  padding: 24px 0;
+}
