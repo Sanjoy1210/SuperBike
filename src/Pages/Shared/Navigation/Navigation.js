@@ -9,7 +9,6 @@ import userIcon from '../../../images/user/user.png';
 const Navigation = () => {
 
   const { user, logOut } = useAuth();
-  console.log(user);
 
   return (
     <Navbar bg="light" expand="lg">

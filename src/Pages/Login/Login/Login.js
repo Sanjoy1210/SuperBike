@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import './Login.css';
 import Navigation from '../../Shared/Navigation/Navigation';
 import Footer from '../../Shared/Footer/Footer';
@@ -11,14 +11,16 @@ import useAuth from '../../../hooks/useAuth';
 const Login = () => {
   const { signInUsingGoogle, loginUser } = useAuth();
 
+  const location = useLocation();
+  const history = useHistory();
+
   const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
-    console.log(data);
-    loginUser(data.email, data.password);
+    loginUser(data.email, data.password, location, history);
     reset();
   }
 
-  console.log(watch("example"));
+  // console.log(watch("example"));
   return (
     <>
       <Navigation />

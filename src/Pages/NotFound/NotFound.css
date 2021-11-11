@@ -1,0 +1,23 @@
+.not-found-img {
+  text-align: center;
+}
+
+.not-found-img img {
+  width: 50%;
+}
+
+.not-found-btn {
+  background-color: #00DFC2!important;
+  border-color: #00DFC2!important;
+  font-size: 18px!important;
+  color: #395966!important;
+  font-weight: 600!important;
+  padding: 10px 20px!important;
+}
+
+@media screen and (max-width: 991px) {
+  .not-found-img img {
+    width: 100%;
+    padding-top: 100px;
+  }
+}

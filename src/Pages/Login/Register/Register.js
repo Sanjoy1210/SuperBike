@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import Navigation from '../../Shared/Navigation/Navigation';
 import Footer from '../../Shared/Footer/Footer';
 import googleIcon from '../../../images/logo/google.png';
@@ -10,11 +10,14 @@ import useAuth from '../../../hooks/useAuth';
 const Register = () => {
   const { registerUser } = useAuth();
 
+  const location = useLocation();
+  const history = useHistory();
+
   const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
     data.displayName = data.firstName + ' ' + data.lastName;
     console.log(data);
-    registerUser(data.email, data.password, data.displayName);
+    registerUser(data.email, data.password, data.displayName, location, history);
     reset();
   }
   console.log(watch("example"));
