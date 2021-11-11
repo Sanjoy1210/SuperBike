@@ -32,6 +32,7 @@ const Navigation = () => {
               ) :
                 (
                   <>
+                    <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
                     <span className="user-name">{user?.displayName}</span>
                     <span className="profile-pic"><img src={user?.photoURL ? user?.photoURL : userIcon} alt="" /></span>
                     <Button className="login-btn" onClick={logOut}>Log out</Button>

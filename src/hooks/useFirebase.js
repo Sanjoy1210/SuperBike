@@ -24,6 +24,7 @@ const useFirebase = () => {
         // const user = userCredential.user;
         const newUser = { email, displayName }
         setUser(newUser);
+        setError('');
 
         // send name to firebase after creation
         updateProfile(auth.currentUser, {
