@@ -42,7 +42,7 @@ const Login = () => {
                 <div className="signin-authoraization">
                   <p>or Login using </p>
                   <div className="signin-buttons">
-                    <Button onClick={signInUsingGoogle} className="signin-btn">
+                    <Button onClick={() => signInUsingGoogle(location, history)} className="signin-btn">
                       <img src={googleIcon} alt="" />
                       <span>Continue with Google</span>
                     </Button>{' '}
