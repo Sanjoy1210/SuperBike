@@ -1,0 +1,81 @@
+.login-page {
+  width: 30%;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.input-field {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 25px;
+  border: 0.5px solid lightgray;
+  text-transform: none;
+}
+
+.submit-btn {
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+.submit-btn:hover {
+  padding: 0 30px;
+}
+
+.login-text {
+  font-size: 14px;
+  text-transform: none;
+  padding-bottom: 10px;
+}
+
+.login-text a,
+.login-text a:hover {
+  text-transform: none;
+  color: #E76F51;
+}
+
+.signin-authoraization p {
+  font-size: 15px;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.signin-authoraization {
+  padding: 20px 0;
+}
+
+.signin-btn {
+  background-color: #fff!important;
+  width: 100%;
+  border: .5px solid lightgray!important;
+  border-radius: 25px!important;
+  display: flex!important;
+  align-items: center;
+}
+
+.signin-btn span {
+  color: #E76F51;
+  font-size: 14px;
+  padding-left: 8rem;
+}
+
+@media only screen and (max-width: 668px) {
+  .login-page {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+@media only screen and (min-width: 669px) and (max-width: 991px) {
+  .login-page {
+    width: 70%;
+    padding: 20px 0;
+  }
+
+  .signin-btn span {
+    padding-left: 15rem;
+  }
+}
