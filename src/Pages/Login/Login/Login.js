@@ -6,8 +6,11 @@ import './Login.css';
 import Navigation from '../../Shared/Navigation/Navigation';
 import Footer from '../../Shared/Footer/Footer';
 import googleIcon from '../../../images/logo/google.png';
+import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
+  const { user, signInUsingGoogle } = useAuth();
+
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
 
@@ -33,7 +36,7 @@ const Login = () => {
                 <div className="signin-authoraization">
                   <p>or Login using </p>
                   <div className="signin-buttons">
-                    <Button className="signin-btn">
+                    <Button onClick={signInUsingGoogle} className="signin-btn">
                       <img src={googleIcon} alt="" />
                       <span>Continue with Google</span>
                     </Button>{' '}
