@@ -1,18 +1,20 @@
-.card-body {
+.single-product .card-body {
   padding: 24px 10px 10px!important;
 }
 
-.card-title {
+.single-product .card-title,
+.single-news .card-title {
   font-size: 20px!important;
   line-height: 1.8!important;
 }
 
-.card-text {
+.single-product .card-text,
+.single-news .card-text {
   font-size: 15px;
   text-align: justify;
 }
 
-.card-img-top {
+.single-product .card-img-top {
   padding-top: 20px;
 }
 

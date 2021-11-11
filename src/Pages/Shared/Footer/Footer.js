@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
             </Col>
             <Col xs={12} md={5} lg={3} className="offset-md-1 offset-lg-0">
-              <div>
+              <div className="office-location">
                 <h4>OFFICE IN NEW YORK</h4>
                 <p><i className="fas fa-map-marker-alt"></i> 7398 Colonial Rd, Brooklyn <br /> 242 Wythe Ave #4, Brooklyn </p>
                 <p><i className="fas fa-phone-alt"></i> + (123) 124-567-8901 <br /> + (123) 124-567-8901 </p>

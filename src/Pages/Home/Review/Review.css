@@ -1,0 +1,41 @@
+/* .customer-img {
+  margin-right: 10px;
+} */
+
+.single-review {
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+}
+
+.customer-img img {
+  height: 100%!important;
+  object-fit: cover;
+}
+
+.review-content {
+  font-size: 14px;
+  text-align: left;
+}
+
+.customer-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: red;
+}
+
+.customer-role {
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+}
+
+@media only screen and (max-width: 668px) {
+  .customer-img img {
+    width: 200px!important;
+    height: 200px!important;
+    border-radius: 150px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+  }
+}

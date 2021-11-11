@@ -3,13 +3,14 @@
   position: relative;
 }
 
-.products-area h3 {
+.section-title {
   font-size: 3rem;
   font-weight: 700;
   padding-bottom: 30px;
+  text-transform: uppercase;
 }
 
-.products-area h3::after {
+.section-title::after {
   content: "";
   position: absolute;
   /* bottom: -8px; */

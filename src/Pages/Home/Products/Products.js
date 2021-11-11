@@ -8,7 +8,7 @@ const Products = () => {
     <div className="products-area">
       <div className="products-area-wrapper">
         <Container>
-          <h3>FEATURED PRODUCTS</h3>
+          <h3 className="section-title">FEATURED PRODUCTS</h3>
           <Row xs={1} md={2} lg={4} className="g-4">
             <Product />
           </Row>

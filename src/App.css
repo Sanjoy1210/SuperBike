@@ -16,11 +16,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.section-title {
-  font-size: 3rem;
-  text-align: center;
-}
-
 .App {
   font-family: 'Poppins', sans-serif;
 }
