@@ -15,10 +15,11 @@
   align-items: center!important;
 }
 
-.navbar-nav a:not(:last-child) {
+.navbar-nav a:not(:last-child),
+.user-name {
   margin-right: 2.2rem;
   font-size: 1.7rem;
-  color: #fff;
+  color: rgba(0,0,0,.55);
   transition: .5s;
 }
 
@@ -28,21 +29,31 @@
 
 
 .login-btn {
-  font-size: 1.7rem;
-  background-color: transparent;
-  color: #E76F51;
-  border: 1px solid #E76F51;
+  font-size: 1.7rem!important;
+  background-color: transparent!important;
+  color: #E76F51!important;
+  border: 1px solid #E76F51!important;
   padding: 8px 16px!important;
-  border-radius: 5px;
+  border-radius: 5px!important;
 }
 
 .login-btn:hover {
-  background-color: #E76F51;
+  background-color: #E76F51!important;
   color: #fff!important;
+}
+
+.profile-pic img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 2.2rem;
 }
 
 @media only screen and (max-width: 991px) {
   .navbar-nav {
     display: inline-block!important;
+  }
+  .login-btn {
+    display: block!important;
   }
 }

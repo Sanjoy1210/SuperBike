@@ -5,12 +5,16 @@ import { Link } from 'react-router-dom';
 import Navigation from '../../Shared/Navigation/Navigation';
 import Footer from '../../Shared/Footer/Footer';
 import googleIcon from '../../../images/logo/google.png';
+import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
+  const { registerUser } = useAuth();
+
   const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
     data.displayName = data.firstName + ' ' + data.lastName;
     console.log(data);
+    registerUser(data.email, data.password, data.displayName);
     reset();
   }
   console.log(watch("example"));

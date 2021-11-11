@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Login/Firebase/firebase.init";
 
@@ -14,6 +14,50 @@ const useFirebase = () => {
   // initialize auth and googleProvider
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
+
+  // register a new user
+  const registerUser = (email, password, displayName) => {
+    setIsLoading(true);
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        const newUser = { email, displayName }
+        setUser(newUser);
+
+        // send name to firebase after creation
+        updateProfile(auth.currentUser, {
+          displayName: displayName
+        }).then(() => {
+          // Profile updated!
+          // ...
+        }).catch((error) => {
+          // An error occurred
+          // ...
+        });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setError(errorMessage);
+      })
+      .finally(() => setIsLoading(false));
+  }
+
+  // log in user
+  const loginUser = (email, password) => {
+    setIsLoading(true);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        setError('');
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setError(errorMessage);
+      })
+      .finally(() => setIsLoading(false));
+  }
 
   // google sign in
   const signInUsingGoogle = () => {
@@ -58,6 +102,8 @@ const useFirebase = () => {
     isLoading,
     error,
     signInUsingGoogle,
+    registerUser,
+    loginUser,
     logOut
   };
 };

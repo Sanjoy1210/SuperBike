@@ -9,10 +9,14 @@ import googleIcon from '../../../images/logo/google.png';
 import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
-  const { user, signInUsingGoogle } = useAuth();
+  const { signInUsingGoogle, loginUser } = useAuth();
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
+  const onSubmit = data => {
+    console.log(data);
+    loginUser(data.email, data.password);
+    reset();
+  }
 
   console.log(watch("example"));
   return (
