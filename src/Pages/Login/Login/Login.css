@@ -15,6 +15,10 @@
   text-transform: none;
 }
 
+.input-field:focus {
+  border-color: #E76F51;
+}
+
 .submit-btn {
   color: #fff;
   font-size: 15px;
