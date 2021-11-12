@@ -1,14 +1,24 @@
 import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
+import axios from 'axios';
 import { useForm } from 'react-hook-form';
 
 const ReviewForm = () => {
 
-  const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const onSubmit = data => {
     data.ratings = parseFloat(data.ratings);
     console.log(data);
-    reset();
+
+    const addReview = async () => {
+      const result = await axios.post('http://localhost:5000/addReview', data);
+      if (result.data.insertedId) {
+        alert('Review added successfully');
+        reset();
+      }
+    }
+
+    addReview().catch(console.dir);
   }
 
   return (
@@ -27,7 +37,7 @@ const ReviewForm = () => {
                 <input className="input-field" type="text" placeholder="Image url" {...register("img")} />
                 <textarea rows="4" {...register("comment")} placeholder="Enter comment" />
                 {errors.exampleRequired && <span>This field is required</span>}
-                <input className="submit-btn" type="submit" value="Add Product" />
+                <input className="submit-btn" type="submit" value="Add Review" />
               </form>
             </Col>
           </Row>
