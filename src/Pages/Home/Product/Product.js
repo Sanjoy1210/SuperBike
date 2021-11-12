@@ -1,30 +1,31 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import Rating from 'react-rating';
-import bike from '../../../images/products/bike14.png';
 import './Product.css';
 
-const Product = () => {
+const Product = ({ product }) => {
+  const { title, description, img, price, ratings } = product;
+
   return (
     <Col className="single-product">
       <Card>
         <div className="hearts">
           <i className="fas fa-heart"></i>
         </div>
-        <Card.Img variant="top" src={bike} />
+        <Card.Img variant="top" src={img} />
         <Card.Body>
           <Rating
             emptySymbol="far fa-star"
             fullSymbol="fas fa-star"
-            initialRating={2.5}
+            initialRating={ratings}
             readonly
           />
-          <Card.Title>Giant Stance 2 27.5″</Card.Title>
+          <Card.Title>{title}</Card.Title>
           <Card.Text>
-            Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut risus.
+            {description.slice(0, 100)}
           </Card.Text>
           <h4 className="price py-2">
-            $699
+            $ {price}
           </h4>
 
           <div className="fancy-button">

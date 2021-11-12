@@ -1,13 +1,25 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import './AddProducts.css';
 
 const AddProducts = () => {
   const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
-    data.review = 20;
-    reset();
+    data.reviews = 20;
+    data.gallery = [data.img, data.img];
+
+    const addProduct = async () => {
+      const result = await axios.post('http://localhost:5000/addProducts', data);
+      console.log(result);
+      if (result.data.insertedId) {
+        alert('Products added successfully');
+        reset();
+      }
+    }
+
+    addProduct().catch(console.dir);
   }
 
   return (
