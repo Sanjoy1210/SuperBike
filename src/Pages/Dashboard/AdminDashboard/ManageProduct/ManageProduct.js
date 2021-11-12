@@ -2,8 +2,8 @@ import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import Rating from 'react-rating';
 
-const ManageProduct = ({ product }) => {
-  const { title, description, img, price, ratings } = product;
+const ManageProduct = ({ product, handleDeleteProduct }) => {
+  const { title, description, img, price, ratings, _id } = product;
   return (
     <Col className="single-product">
       <Card>
@@ -27,7 +27,7 @@ const ManageProduct = ({ product }) => {
           </h4>
 
           <div className="fancy-button">
-            <Button className="expand-btn">
+            <Button onClick={() => handleDeleteProduct(_id)} className="expand-btn">
               <span>Delete</span>
               <i className="fas fa-arrow-right"></i>
             </Button>{' '}
