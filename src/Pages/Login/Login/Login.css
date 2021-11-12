@@ -1,4 +1,6 @@
-.login-page {
+.login-page,
+.make-admin-page,
+.addproducts-page {
   width: 30%;
   margin: auto;
   padding: 100px 0;
@@ -68,13 +70,17 @@
 }
 
 @media only screen and (max-width: 668px) {
-  .login-page {
+  .login-page,
+  .make-admin-page,
+  .addproducts-page {
     width: 100%;
     padding: 20px 0;
   }
 }
 @media only screen and (min-width: 669px) and (max-width: 991px) {
-  .login-page {
+  .login-page,
+  .make-admin-page,
+  .addproducts-page {
     width: 70%;
     padding: 20px 0;
   }

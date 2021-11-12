@@ -11,6 +11,7 @@ import AuthProvider from "./Context/AuthProvider/AuthProvider";
 import AllProducts from "./Pages/Explore/AllProducts/AllProducts";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import NotFound from "./Pages/NotFound/NotFound";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -33,9 +34,9 @@ function App() {
             <PrivateRoute path="/explore">
               <AllProducts />
             </PrivateRoute>
-            {/* <PrivateRoute path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard />
-            </PrivateRoute> */}
+            </PrivateRoute>
             <Route path="*">
               <NotFound />
             </Route>

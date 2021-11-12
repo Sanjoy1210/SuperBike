@@ -1,0 +1,16 @@
+.offcanvas-start {
+  width: 250px!important;
+}
+
+.dashboard {
+  justify-content: flex-start!important;
+}
+
+.dashboard .navbar-brand {
+  margin-left: 10px;
+}
+
+.offcanvas-title {
+  font-size: 2rem!important;
+  font-weight: 700!important;
+}
