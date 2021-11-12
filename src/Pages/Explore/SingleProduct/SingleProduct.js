@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
 import './SingleProduct.css';
 
 const SingleProduct = ({ product }) => {
-  const { title, img, price, description, ratings, reviews, gallery } = product;
+  const { title, img, price, description, ratings, reviews, _id } = product;
   return (
     <Row className="mb-4">
       <Col xs={12} md={12} lg={4}>
@@ -36,7 +37,7 @@ const SingleProduct = ({ product }) => {
           <p>{description.slice(0, 300)}</p>
         </div>
         <div className="purchase-btn">
-          <Button className="buy-now-btn">Buy now</Button>
+          <Button as={Link} to={`/purchaseProduct/${_id}`} className="buy-now-btn">Buy now</Button>
         </div>
       </Col>
     </Row>

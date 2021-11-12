@@ -33,8 +33,7 @@
   font-size: 15px;
 }
 
-.expand-btn,
-.submit-btn {
+.expand-btn {
   height: 46px;
   max-width: 46px;
   background: #E76F51!important;

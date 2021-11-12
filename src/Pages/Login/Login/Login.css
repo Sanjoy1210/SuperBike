@@ -1,7 +1,7 @@
 .login-page,
 .make-admin-page,
 .addproducts-page {
-  width: 30%;
+  width: 40%;
   margin: auto;
   padding: 100px 0;
 }
@@ -19,17 +19,6 @@
 
 .input-field:focus {
   border-color: #E76F51;
-}
-
-.submit-btn {
-  color: #fff;
-  font-size: 15px;
-  padding: 10px 20px;
-  font-weight: 500;
-}
-
-.submit-btn:hover {
-  padding: 0 30px;
 }
 
 .login-text {
@@ -66,7 +55,7 @@
 .signin-btn span {
   color: #E76F51;
   font-size: 14px;
-  padding-left: 8rem;
+  padding-left: 15rem;
 }
 
 @media only screen and (max-width: 668px) {

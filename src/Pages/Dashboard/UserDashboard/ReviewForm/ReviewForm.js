@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import './ReviewForm.css';
 
 const ReviewForm = () => {
 
@@ -37,7 +38,7 @@ const ReviewForm = () => {
                 <input className="input-field" type="text" placeholder="Image url" {...register("img")} />
                 <textarea rows="4" {...register("comment")} placeholder="Enter comment" />
                 {errors.exampleRequired && <span>This field is required</span>}
-                <input className="submit-btn" type="submit" value="Add Review" />
+                <input className="add-review-btn" type="submit" value="Add Review" />
               </form>
             </Col>
           </Row>
