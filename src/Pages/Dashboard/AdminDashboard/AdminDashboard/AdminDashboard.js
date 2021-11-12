@@ -32,10 +32,11 @@ const AdminDashboard = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content flex-grow-1 pe-3">
+                <Nav.Link as={Link} to={`${url}`}></Nav.Link>
                 <Nav.Link as={Link} to="/home">Home</Nav.Link>
                 <Nav.Link as={Link} to={`${url}/addProducts`}>Add Products</Nav.Link>
-                <Nav.Link as={Link} to={`${url}/makeAdmin`}>Make Admin</Nav.Link>
                 <Nav.Link as={Link} to={`${url}/manageProducts`}>Manage Products</Nav.Link>
+                <Nav.Link as={Link} to={`${url}/makeAdmin`}>Make Admin</Nav.Link>
                 <Nav.Link as={Link} to={`${url}/manageOrders`}>Manage Orders</Nav.Link>
                 <Button className="login-btn" onClick={logOut}>Log out</Button>
               </Nav>
@@ -46,6 +47,9 @@ const AdminDashboard = () => {
 
       <Container>
         <Switch>
+          <Route exact path={`${path}`}>
+            <ManageProducts />
+          </Route>
           <Route exact path={`${path}/addProducts`}>
             <AddProducts />
           </Route>

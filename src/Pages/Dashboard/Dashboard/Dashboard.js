@@ -6,8 +6,8 @@ const Dashboard = () => {
 
   return (
     <div>
-      {/* <UserDashboard /> */}
-      <AdminDashboard />
+      <UserDashboard />
+      {/* <AdminDashboard /> */}
 
     </div>
   );

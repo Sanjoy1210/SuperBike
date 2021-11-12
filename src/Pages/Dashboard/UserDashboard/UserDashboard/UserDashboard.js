@@ -31,6 +31,7 @@ const UserDashboard = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content flex-grow-1 pe-3">
+                <Nav.Link as={Link} to={`${url}`}></Nav.Link>
                 <Nav.Link as={Link} to="/home">Home</Nav.Link>
                 <Nav.Link as={Link} to={`${url}/myOrders`}>My Orders</Nav.Link>
                 <Nav.Link as={Link} to={`${url}/payment`}>Payment</Nav.Link>
@@ -44,6 +45,9 @@ const UserDashboard = () => {
 
       <Container>
         <Switch>
+          <Route exact path={`${path}`}>
+            <MyOders />
+          </Route>
           <Route exact path={`${path}/myOrders`}>
             <MyOders />
           </Route>
