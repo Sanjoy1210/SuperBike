@@ -12,6 +12,7 @@ import AllProducts from "./Pages/Explore/AllProducts/AllProducts";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import NotFound from "./Pages/NotFound/NotFound";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import PurchaseProduct from "./Pages/PurchaseProduct/PurchaseProduct";
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/dashboard">
               <Dashboard />
+            </PrivateRoute>
+            <PrivateRoute path="/purchaseProduct/:id">
+              <PurchaseProduct />
             </PrivateRoute>
             <Route path="*">
               <NotFound />

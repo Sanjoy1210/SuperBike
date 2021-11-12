@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
 import './Product.css';
 
 const Product = ({ product }) => {
-  const { title, description, img, price, ratings } = product;
+  const { title, description, img, price, ratings, _id } = product;
 
   return (
     <Col className="single-product">
@@ -29,7 +30,7 @@ const Product = ({ product }) => {
           </h4>
 
           <div className="fancy-button">
-            <Button className="expand-btn">
+            <Button as={Link} to={`/purchaseProduct/${_id}`} className="expand-btn">
               <span>Buy now</span>
               <i className="fas fa-arrow-right"></i>
             </Button>{' '}

@@ -1,0 +1,100 @@
+.purchase-page {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.purchase-product-title h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.purchase-product-ratings {
+  padding-top: 10px;
+}
+
+.purchase-product-ratings p {
+  font-size: 12px;
+  color: #E76F51;
+  padding-top: 5px;
+}
+
+.purchase-product-price span {
+  font-size: 30px;
+  font-weight: 700;
+  color: #E76F51;
+}
+
+.purchase-product-description p {
+  font-size: 14px;
+  text-align: justify;
+  padding-top: 10px;
+}
+
+.purchase-product-quantity {
+  padding-top: 10px;
+}
+
+.purchase-product-quantity input,
+.purchase-now-form input {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  border: .5px solid lightgray;
+  /* text-align: center; */
+  background-color: transparent;
+}
+
+.purchase-product-quantity input::placeholder {
+  color: #222;
+}
+
+.purchase-product-quantity input:focus,
+.purchase-now-form input:focus {
+  border-color: #E76F51;
+}
+
+.btn-color {
+  color: #E76F51;
+}
+
+.purchase-now-area {
+  padding-top: 80px;
+}
+
+.purchase-now-form {
+  width: 50%;
+  margin: auto;
+}
+
+.purchase-now-form input {
+  display: block;
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.purchase-now-form .purchase-btn {
+  color: #E76F51;
+}
+
+.purchase-now-form .purchase-btn:hover {
+  background-color: #E76F51;
+  color: #fff;
+}
+
+@media only screen and (max-width: 668px) {
+  .purchase-now-form {
+    width: 100%;
+  }
+  .purchase-now-form input {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 669px) and (max-width: 991px) {
+  .purchase-now-form {
+    width: 80%;
+  }
+  .purchase-now-form input {
+    width: 100%;
+  }
+}

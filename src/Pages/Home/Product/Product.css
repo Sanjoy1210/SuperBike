@@ -36,7 +36,7 @@
 .expand-btn,
 .submit-btn {
   height: 46px;
-  min-width: 46px;
+  max-width: 46px;
   background: #E76F51!important;
   display: flex!important;
   align-items: center;
@@ -62,6 +62,7 @@
 .expand-btn:hover {
   padding-left: 25px;
   padding-right: 25px;
+  min-width: 196px;
 }
 
 .expand-btn:hover span {
