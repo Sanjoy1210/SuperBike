@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Container, Row } from 'react-bootstrap';
+import ManageProduct from '../ManageProduct/ManageProduct';
 
 const ManageProducts = () => {
+  const [manageAllProducts, setManageAllProducts] = useState([]);
+
+  useEffect(() => {
+    const loadAllProducts = async () => {
+      const result = await axios('http://localhost:5000/products');
+      setManageAllProducts(result.data);
+    }
+
+    loadAllProducts().catch(console.dir);
+  }, []);
+
   return (
-    <div>
-      <h2>This is Manage products</h2>
+    <div className="products-area">
+      <div className="products-area-wrapper">
+        <Container>
+          <h3 className="section-title">Manage All PRODUCTS</h3>
+          <Row xs={1} md={2} lg={4} className="g-4">
+            {
+              manageAllProducts.map(product => <ManageProduct key={product._id} product={product} />)
+            }
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 };

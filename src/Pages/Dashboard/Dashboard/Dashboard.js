@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useAuth from '../../../hooks/useAuth';
 import AdminDashboard from '../AdminDashboard/AdminDashboard/AdminDashboard';
 import UserDashboard from '../UserDashboard/UserDashboard/UserDashboard';
 
 const Dashboard = () => {
+  const { admin } = useAuth();
 
   return (
     <div>
-      {/* <UserDashboard /> */}
-      <AdminDashboard />
-
+      {
+        admin ? <AdminDashboard /> : <UserDashboard />
+      }
     </div>
   );
 };

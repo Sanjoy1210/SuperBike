@@ -7,6 +7,7 @@ import {
   useRouteMatch
 } from "react-router-dom";
 import useAuth from '../../../../hooks/useAuth';
+import AdminRoute from '../../../Login/AdminRoute/AdminRoute';
 import AddProducts from '../AddProducts/AddProducts';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import ManageOrders from '../ManageOrders/ManageOrders';
@@ -47,21 +48,21 @@ const AdminDashboard = () => {
 
       <Container>
         <Switch>
-          <Route exact path={`${path}`}>
+          <AdminRoute exact path={`${path}`}>
             <ManageProducts />
-          </Route>
-          <Route exact path={`${path}/addProducts`}>
+          </AdminRoute>
+          <AdminRoute exact path={`${path}/addProducts`}>
             <AddProducts />
-          </Route>
-          <Route exact path={`${path}/makeAdmin`}>
+          </AdminRoute>
+          <AdminRoute exact path={`${path}/makeAdmin`}>
             <MakeAdmin />
-          </Route>
-          <Route exact path={`${path}/manageProducts`}>
+          </AdminRoute>
+          <AdminRoute exact path={`${path}/manageProducts`}>
             <ManageProducts />
-          </Route>
-          <Route exact path={`${path}/manageOrders`}>
+          </AdminRoute>
+          <AdminRoute exact path={`${path}/manageOrders`}>
             <ManageOrders />
-          </Route>
+          </AdminRoute>
         </Switch>
       </Container>
     </>
