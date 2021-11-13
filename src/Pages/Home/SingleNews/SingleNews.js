@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-import fun from '../../../images/fun.jpg';
 
 const SingleNews = ({ blog }) => {
   const { title, img, description } = blog;

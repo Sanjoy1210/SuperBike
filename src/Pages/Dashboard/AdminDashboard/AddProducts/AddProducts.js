@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './AddProducts.css';
 
 const AddProducts = () => {
-  const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const onSubmit = data => {
     data.reviews = 20;
     data.gallery = [data.img, data.img];

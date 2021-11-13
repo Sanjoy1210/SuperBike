@@ -14,7 +14,7 @@ const Login = () => {
   const location = useLocation();
   const history = useHistory();
 
-  const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const onSubmit = data => {
     loginUser(data.email, data.password, location, history);
     reset();

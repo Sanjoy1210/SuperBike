@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import Rating from 'react-rating';
-import customer from '../../../images/customer-1.jpg';
 import './Review.css';
 
 const Review = ({ review }) => {
