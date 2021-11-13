@@ -8,7 +8,7 @@ const ManageProducts = () => {
 
   useEffect(() => {
     const loadAllProducts = async () => {
-      const result = await axios('http://localhost:5000/products');
+      const result = await axios('https://ancient-dawn-23437.herokuapp.com/products');
       setManageAllProducts(result.data);
     }
 
@@ -18,7 +18,7 @@ const ManageProducts = () => {
   const handleDeleteProduct = async (id) => {
     const processed = window.confirm('Are you sure, you want to delete?');
     if (processed) {
-      const result = await axios.delete(`http://localhost:5000/products/${id}`);
+      const result = await axios.delete(`https://ancient-dawn-23437.herokuapp.com/products/${id}`);
       if (result.data.deletedCount) {
         alert('deleted successfully');
       }

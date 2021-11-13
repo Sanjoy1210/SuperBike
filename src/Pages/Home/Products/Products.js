@@ -9,7 +9,7 @@ const Products = () => {
 
   useEffect(() => {
     const loadProducts = async () => {
-      const result = await axios('http://localhost:5000/products');
+      const result = await axios('https://ancient-dawn-23437.herokuapp.com/products');
       setProducts(result.data);
     }
 

@@ -10,7 +10,7 @@ const MyOders = () => {
 
   useEffect(() => {
     const loadOrders = async () => {
-      const result = await axios(`http://localhost:5000/orders?email=${user.email}`);
+      const result = await axios(`https://ancient-dawn-23437.herokuapp.com/orders?email=${user.email}`);
       setMyOrders(result.data);
     }
 
@@ -21,7 +21,7 @@ const MyOders = () => {
     console.log(id);
     const processed = window.confirm('are u sure u want to delete?');
     if (processed) {
-      const result = await axios.delete(`http://localhost:5000/orders/${id}`);
+      const result = await axios.delete(`https://ancient-dawn-23437.herokuapp.com/orders/${id}`);
       if (result.data.deletedCount) {
         alert('deleted successfully')
       }

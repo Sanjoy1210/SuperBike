@@ -12,7 +12,7 @@ const ManageOrders = () => {
 
   useEffect(() => {
     const loadAllBooking = async () => {
-      const result = await axios('http://localhost:5000/allOrders');
+      const result = await axios('https://ancient-dawn-23437.herokuapp.com/allOrders');
       setAllOrders(result.data);
     }
 
@@ -29,7 +29,7 @@ const ManageOrders = () => {
   const handleRemoverOrder = async (id) => {
     const processed = window.confirm('are you sure, you want to delete?');
     if (processed) {
-      const result = await axios.delete(`http://localhost:5000/orders/${id}`);
+      const result = await axios.delete(`https://ancient-dawn-23437.herokuapp.com/orders/${id}`);
       if (result.data.deletedCount) {
         alert('deleted successfully');
       }
@@ -42,7 +42,7 @@ const ManageOrders = () => {
     const updateOrder = allOrders.find(order => order._id == id);
 
     updateOrder.status = 'shipped';
-    const result = await axios.put(`http://localhost:5000/order/${id}`, updateOrder);
+    const result = await axios.put(`https://ancient-dawn-23437.herokuapp.com/order/${id}`, updateOrder);
 
     if (result.data.modifiedCount) {
       setIsUpdate(true);

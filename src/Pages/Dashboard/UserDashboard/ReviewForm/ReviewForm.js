@@ -14,7 +14,7 @@ const ReviewForm = () => {
     console.log(data);
 
     const addReview = async () => {
-      const result = await axios.post('http://localhost:5000/addReview', data);
+      const result = await axios.post('https://ancient-dawn-23437.herokuapp.com/addReview', data);
       if (result.data.insertedId) {
         alert('Review added successfully');
         reset();

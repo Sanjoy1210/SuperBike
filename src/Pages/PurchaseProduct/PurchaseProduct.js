@@ -16,7 +16,7 @@ const PurchaseProduct = () => {
 
   useEffect(() => {
     const loadPrdouct = async () => {
-      const result = await axios(`http://localhost:5000/product/${id}`);
+      const result = await axios(`https://ancient-dawn-23437.herokuapp.com/product/${id}`);
       setProduct(result.data);
     }
     loadPrdouct().catch(console.dir);
@@ -29,7 +29,7 @@ const PurchaseProduct = () => {
     data.img = product?.img;
     data.price = parseFloat(data?.price);
 
-    const result = await axios.post('http://localhost:5000/orders', data);
+    const result = await axios.post('https://ancient-dawn-23437.herokuapp.com/orders', data);
     console.log(result);
     if (result.data.insertedId) {
       alert('Order successfully completed');

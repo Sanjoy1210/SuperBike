@@ -11,7 +11,7 @@ const AddProducts = () => {
     data.gallery = [data.img, data.img];
 
     const addProduct = async () => {
-      const result = await axios.post('http://localhost:5000/addProducts', data);
+      const result = await axios.post('https://ancient-dawn-23437.herokuapp.com/addProducts', data);
       console.log(result);
       if (result.data.insertedId) {
         alert('Products added successfully');
