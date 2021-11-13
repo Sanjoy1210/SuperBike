@@ -1,0 +1,53 @@
+.single-order {
+  box-shadow: 0px 3px 10px #21252947;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.single-order img {
+  width: 100px;
+}
+
+.single-order h3,
+.single-order span,
+.order-price,
+.single-order button {
+  font-size: 14px;
+  color: #333;
+}
+
+.single-order p {
+  margin-bottom: 0;
+}
+
+.pending {
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.shipped {
+  background-color: limegreen;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+@media only screen and (max-width: 668px) {
+  .single-order {
+    flex-direction: column;
+  }
+  .single-order img {
+    width: 100%;
+  }
+  .single-order p {
+    margin: 10px 0;
+  }
+
+  .single-order span p {
+    margin: 0;
+  }
+}
