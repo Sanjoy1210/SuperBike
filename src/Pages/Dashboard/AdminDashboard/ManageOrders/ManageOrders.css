@@ -1,0 +1,21 @@
+.manage-orders {
+  padding-top: 20px;
+}
+
+.manage-orders-status {
+  margin-bottom: 30px;
+}
+
+.manage-orders .total-orders,
+.manage-orders .pending-orders,
+.manage-orders .shipped-orders {
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 668px) {
+  .manage-orders .total-orders,
+  .manage-orders .pending-orders,
+  .manage-orders .shipped-orders {
+    margin-bottom: 10px;
+  }
+}

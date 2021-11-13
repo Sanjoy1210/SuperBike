@@ -36,7 +36,7 @@ const Register = () => {
                   {errors.exampleRequired && <span>This field is required</span>}
 
                   <p className="login-text">Already have an account? <Link to="/login">Login here</Link></p>
-                  <input className="submit-btn" type="submit" value="Register" />
+                  <input className="register-btn" type="submit" value="Register" />
                 </form>
 
                 <div className="signin-authoraization">

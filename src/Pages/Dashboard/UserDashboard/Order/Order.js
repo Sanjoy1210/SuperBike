@@ -5,7 +5,7 @@ import './Order.css';
 const Order = ({ order, handleRemoveOrder }) => {
   const { title, name, price, img, status, _id } = order;
   return (
-    <Col sm={12} md={12} lg={6}>
+    <Col sm={12}>
       <div className="single-order">
         <img src={img} alt="" />
         <h3>{title}</h3>

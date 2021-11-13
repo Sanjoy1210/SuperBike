@@ -12,3 +12,13 @@
 .addproducts-page textarea:focus {
   border-color: #E76F51;
 }
+
+.addproducts-page .submit-btn,
+.make-admin-page .submit-btn {
+  background-color: #E76F51;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+}

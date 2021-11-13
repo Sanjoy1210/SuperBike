@@ -27,7 +27,8 @@
   color: #E76F51!important;
 }
 
-.login-btn {
+.login-btn,
+.register-btn {
   font-size: 1.7rem!important;
   background-color: transparent!important;
   color: #E76F51!important;
@@ -36,7 +37,8 @@
   border-radius: 25px!important;
 }
 
-.login-btn:hover {
+.login-btn:hover,
+.register-btn:hover {
   background-color: #E76F51!important;
   color: #fff!important;
 }

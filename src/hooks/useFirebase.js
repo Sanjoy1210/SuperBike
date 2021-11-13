@@ -26,6 +26,7 @@ const useFirebase = () => {
         const newUser = { email, displayName }
         setUser(newUser);
         setError('');
+        history.replace('/');
 
         // save user to database
         saveUser(email, displayName, 'POST');
@@ -41,7 +42,6 @@ const useFirebase = () => {
           // ...
         });
 
-        history.replace('/');
       })
       .catch((error) => {
         // const errorCode = error.code;

@@ -21,6 +21,7 @@ const MakeAdmin = () => {
         if (data.modifiedCount) {
           console.log(data);
           setSuccess(true);
+          alert('Made Admin successfully');
         }
       });
     reset();
@@ -35,7 +36,7 @@ const MakeAdmin = () => {
             <Col>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input className="input-field" type="email" placeholder="Email Address" {...register("email")} />
-                <input className="submit-btn" type="submit" value="submit" />
+                <input className="submit-btn" type="submit" value="Make admin" />
               </form>
               {success && <p>Made Admin successfully</p>}
             </Col>

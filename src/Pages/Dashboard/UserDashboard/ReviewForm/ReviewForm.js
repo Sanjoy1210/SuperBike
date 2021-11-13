@@ -3,8 +3,10 @@ import { Col, Container, Row } from 'react-bootstrap';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import './ReviewForm.css';
+import useAuth from '../../../../hooks/useAuth';
 
 const ReviewForm = () => {
+  const { user } = useAuth();
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const onSubmit = data => {
@@ -30,8 +32,8 @@ const ReviewForm = () => {
           <Row>
             <Col>
               <form onSubmit={handleSubmit(onSubmit)}>
-                <input className="input-field" type="text" placeholder="Your name" {...register("name")} />
-                <input className="input-field" type="email" placeholder="Email" {...register("email")} />
+                <input className="input-field" type="text" defaultValue={user.displayName} {...register("name")} />
+                <input className="input-field" type="email" defaultValue={user.email} {...register("email")} />
                 <input className="input-field" type="text" placeholder="designation" {...register("designation")} />
                 <input className="input-field" type="text" placeholder="Location" {...register("location")} />
                 <input className="input-field" type="number" placeholder="Ratings" {...register("ratings", { min: 0, max: 5 })} />
